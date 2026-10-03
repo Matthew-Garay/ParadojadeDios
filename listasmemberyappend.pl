@@ -29,7 +29,7 @@ unif9(X):- append([a,b,c],["ozuna",4,5,6,7],X).
 unif10(X):- append([a,b,c],[[4,5,6,78,9],["ozuna","mistico"]],X).
 
 iniciar :-
-    write('¿El mal existe? (si/no): '),
+    write('Â¿El mal existe? (si/no): '),
     read(R1),
     flujo([R1]).
 
@@ -37,50 +37,50 @@ flujo(['no']) :-
     write('Entonces no hay problema que resolver.').
 
 flujo(['si']) :-
-    write('¿Dios sabe que el mal existe? (si/no): '),
+    write('Â¿Dios sabe que el mal existe? (si/no): '),
     read(R2),
     flujo_mal_sabe([R2]).
 
 flujo_mal_sabe(['no']) :-
-    write('Entonces, Él no es omnisciente.').
+    write('Entonces, Ã‰l no es omnisciente.').
 
 flujo_mal_sabe(['si']) :-
-    write('¿Dios puede acabar con el mal? (si/no): '),
+    write('Â¿Dios puede acabar con el mal? (si/no): '),
     read(R3),
     flujo_puede([R3]).
 
 flujo_puede(['no']) :-
-    write('Entonces, Él no es omnipotente.').
+    write('Entonces, Ã‰l no es omnipotente.').
 
 flujo_puede(['si']) :-
-    write('¿Dios quiere acabar con el mal? (si/no): '),
+    write('Â¿Dios quiere acabar con el mal? (si/no): '),
     read(R4),
     flujo_quiere([R4]).
 
 flujo_quiere(['no']) :-
-    write('Entonces, Él no es bueno.').
+    write('Entonces, Ã‰l no es bueno.').
 
 flujo_quiere(['si']) :-
-    write('Entonces, ¿por qué existe el mal? (libre_arbitrio/diablo/probar): '),
+    write('Entonces, Â¿por quÃ© existe el mal? (libre_arbitrio/diablo/probar): '),
     read(R5),
     flujo_razon([R5]).
 
 flujo_razon(['libre_arbitrio']) :-
-    write('¿Dios podría haber creado un universo con libre albedrío y sin mal? (si/no): '),
+    write('Â¿Dios podrÃ­a haber creado un universo con libre albedrÃ­o y sin mal? (si/no): '),
     read(R6),
     flujo_libre([R6]).
 
 flujo_razon(['diablo']) :-
-    write('Si es omnipotente y bondadoso, ya habría destruido al diablo.').
+    write('Si es omnipotente y bondadoso, ya habrÃ­a destruido al diablo.').
 
 flujo_razon(['probar']) :-
     write('Si es omnisciente, ya sabe lo que va a ocurrir y no precisa probarnos.').
 
 flujo_libre(['si']) :-
-    write('Entonces, el mal no debería existir.').
+    write('Entonces, el mal no deberÃ­a existir.').
 
 flujo_libre(['no']) :-
-    write('Entonces, Dios limitó su propia omnipotencia para permitir el libre albedrío.').
+    write('Entonces, Dios limitÃ³ su propia omnipotencia para permitir el libre albedrÃ­o.').
 
 
 

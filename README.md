@@ -1,74 +1,77 @@
-<div align="center">
+﻿# Paradoja de Dios
 
-# Paradoja de Dios
+<p align="center">
+  <a href="https://github.com/Matthew-Garay/ParadojadeDios/actions/workflows/ci.yml"><img src="https://github.com/Matthew-Garay/ParadojadeDios/actions/workflows/ci.yml/badge.svg" alt="CI Status"/></a>
+  <a href="https://github.com/Matthew-Garay/ParadojadeDios/security/dependabot"><img src="https://img.shields.io/badge/Dependabot-enabled-blue?style=flat-square&logo=github&labelColor=555555" alt="Dependabot"/></a>
+</p>
 
-**Práctica de Inteligencia Artificial en Prolog** — ejercicios de `member/2` y `append/3` y un diálogo lógico sobre el problema del mal.
+Practica de Inteligencia Artificial en Prolog con ejercicios de `member/2` y `append/3` y un dialogo logico sobre el problema del mal.
 
-[![SWI-Prolog](https://img.shields.io/badge/SWI--Prolog-8.x-007ACC?style=flat-square)](https://www.swi-prolog.org/)
-[![IA](https://img.shields.io/badge/Inteligencia%20Artificial-L%C3%B3gica-6f42c1?style=flat-square)]()
+## Stack tecnologico
 
-</div>
+- **Lenguaje:** SWI-Prolog
+- **Paradigma:** Programacion logica, manipulacion de listas, razonamiento logico
+- **Entorno:** SWI-Prolog 8.x
 
----
+## Arquitectura
 
-## Descripción
-
-Práctica de Inteligencia Artificial en Prolog con dos partes: primero, **10 combinaciones de `member/2` y 10 de `append/3`** para practicar la unificación de listas; y segundo, un **diálogo por consola** que pregunta sobre el mal, la omnisciencia, la omnipotencia y el libre albedrío, y conduce a una conclusión según las respuestas del usuario.
-
-## Características
-
-- **20 ejercicios** de manipulación de listas con `member/2` y `append/3` (incluyendo listas anidadas y tipos mezclados).
-- **Diálogo interactivo por consola** sobre la *Paradoja de Dios* (el problema del mal).
-- **Razonamiento ramificado:** cada respuesta (`si/no`) lleva a una conclusión distinta usando backtracking y cláusulas de Prolog.
-- Sin dependencias externas.
-
-## Tecnologías utilizadas
-
-- **Lenguaje:** Prolog
-- **Intérprete:** SWI-Prolog 8.x
-
-## Requisitos previos
-
-- [SWI-Prolog](https://www.swi-prolog.org/) instalado.
-
-## Instalación
-
-```bash
-git clone https://github.com/Matthew-Garay/ParadojadeDios.git
-cd ParadojadeDios
-swipl listasmemberyappend.pl
+```mermaid
+graph TD
+    A[Ejercicios member/2 y append/3] --> B[Unificacion de listas en Prolog]
+    B --> C[Dialogo logico por consola]
+    C --> D[Analisis: mal, omnisciencia, omnipotencia, libre albedrio]
+    D --> E[Conclusion segun respuestas del usuario]
+    
+    style A fill:#e1f5fe,stroke:#01579b
+    style B fill:#fff3e0,stroke:#e65100
+    style C fill:#e8f5e9,stroke:#1b5e20
+    style D fill:#f3e5f5,stroke:#4a148c
+    style E fill:#ffe0b2,stroke:#ef6c00
 ```
 
-## Uso
+## Caracteristicas
 
-Inicia el diálogo:
+- 20 ejercicios de manipulacion de listas con `member/2` y `append/3`
+- Listas anidadas y tipos mezclados
+- Dialogo por consola sobre el problema del mal
+- Razonamiento logico con conclusiones condicionales
 
-```prolog
-?- iniciar.
-```
+## Como ejecutar
 
-Responde `si` o `no` a cada pregunta (y `libre_arbitrio`, `diablo` o `probar` cuando se pida). Ejemplos de ejercicios de listas:
+### Requisitos previos
 
-```prolog
-?- miembro1(X).
-?- unif3(X).
-```
+- SWI-Prolog 8.x instalado
+
+### Ejecucion
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Matthew-Garay/ParadojadeDios.git
+   cd ParadojadeDios
+   ```
+2. Ejecuta el archivo principal con SWI-Prolog:
+   ```bash
+   swipl -s listasmemberyappend.pl -g "main" -t "halt"
+   ```
+3. El programa ejecuta los ejercicios de listas y el dialogo logico en consola.
 
 ## Estructura del proyecto
 
 ```
 ParadojadeDios/
-├── listasmemberyappend.pl      # Programa Prolog (member/append + diálogo)
-├── P6. Ejercicio de la Paradoja de Dios.pdf   # Reporte de la práctica
-├── Ejercicio IA.jpg
-└── README.md
+├── listasmemberyappend.pl   # Codigo fuente en Prolog
+├── Ejercicio IA.jpg         # Imagen de referencia
+├── .gitignore               # Archivos excluidos del control de versiones
+├── LICENSE                  # Licencia MIT
+├── README.md                # Este archivo
+└── docs/                    # Documentacion extendida
+    ├── setup-guide.md       # Guia de instalacion
+    └── architecture.md      # Diagrama de arquitectura
 ```
 
-## Licencia
+## Contacto
 
-Proyecto académico y educativo; puedes usarlo libremente con fines de aprendizaje.
-
-## Autor
-
-**Matthew Garay** — [GitHub](https://github.com/Matthew-Garay)
-
+<p align="center">
+  <a href="mailto:1911.garay.perez@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="https://www.linkedin.com/in/matthewgarayperez/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+</p>

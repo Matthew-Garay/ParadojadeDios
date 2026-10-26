@@ -1,77 +1,60 @@
-﻿# Paradoja de Dios
+# Paradoja de Dios
 
-<p align="center">
-  <a href="https://github.com/Matthew-Garay/ParadojadeDios/actions/workflows/ci.yml"><img src="https://github.com/Matthew-Garay/ParadojadeDios/actions/workflows/ci.yml/badge.svg" alt="CI Status"/></a>
-  <a href="https://github.com/Matthew-Garay/ParadojadeDios/security/dependabot"><img src="https://img.shields.io/badge/Dependabot-enabled-blue?style=flat-square&logo=github&labelColor=555555" alt="Dependabot"/></a>
-</p>
+## A. Titulo del Proyecto y Resumen Ejecutivo
 
-Practica de Inteligencia Artificial en Prolog con ejercicios de `member/2` y `append/3` y un dialogo logico sobre el problema del mal.
+Paradoja de Dios es una practica de Inteligencia Artificial en Prolog que incluye ejercicios de manipulacion de listas con los predicados member/2 y append/3, junto con un dialogo logico por consola sobre el problema del mal. El sistema analiza conceptos de omnisciencia, omnipotencia y libre albedrio en función de las respuestas del usuario. Su alcance tecnologico se limita a la ejecucion local en SWI-Prolog, sin componentes de red, base de datos ni interfaz grafica.
 
-## Stack tecnologico
+## B. Arquitectura del Sistema
 
-- **Lenguaje:** SWI-Prolog
-- **Paradigma:** Programacion logica, manipulacion de listas, razonamiento logico
-- **Entorno:** SWI-Prolog 8.x
+El programa sigue una arquitectura de programacion logica con ejecucion secuencial. El flujo comienza con la ejecucion de 20 ejercicios de manipulacion de listas utilizando member/2 y append/3 sobre listas anidadas y tipos mezclados. Posteriormente, se inicia un dialogo logico por consola donde el usuario responde preguntas relacionadas con el problema del mal, la omnisciencia, la omnipotencia y el libre albedrio. El motor de unificacion de Prolog procesa las respuestas y genera conclusiones condicionales segun la logica implementada. No existe arquitectura cliente-servidor ni capas de persistencia; todo ocurre en memoria durante la ejecucion.
 
-## Arquitectura
+## C. Caracteristicas Tecnicas Clave
 
-```mermaid
-graph TD
-    A[Ejercicios member/2 y append/3] --> B[Unificacion de listas en Prolog]
-    B --> C[Dialogo logico por consola]
-    C --> D[Analisis: mal, omnisciencia, omnipotencia, libre albedrio]
-    D --> E[Conclusion segun respuestas del usuario]
-    
-    style A fill:#e1f5fe,stroke:#01579b
-    style B fill:#fff3e0,stroke:#e65100
-    style C fill:#e8f5e9,stroke:#1b5e20
-    style D fill:#f3e5f5,stroke:#4a148c
-    style E fill:#ffe0b2,stroke:#ef6c00
+- 20 ejercicios de manipulacion de listas con los predicados member/2 y append/3.
+- Soporte para listas anidadas y tipos mezclados.
+- Dialogo logico por consola sobre el problema del mal.
+- Razonamiento logico con conclusiones condicionales segun las respuestas del usuario.
+- Motor de unificacion y busqueda con backtracking caracteristico de Prolog.
+- No utiliza base de datos, ni concurrencia, ni procesamiento en tiempo real, ni protocolos de red.
+- Seguridad limitada al ambito de ejecucion local; no maneja datos sensibles ni autenticacion.
+
+## D. Especificacion del Stack Tecnologico
+
+| Categoria | Tecnologia / Librería |
+|-----------|----------------------|
+| Lenguaje | SWI-Prolog 8.x |
+| Paradigma | Programacion logica, manipulacion de listas, razonamiento logico |
+| Entorno | SWI-Prolog 8.x |
+
+## E. Guia de Instalacion, Configuracion y Despliegue
+
+### Requisitos previos del sistema
+
+- SWI-Prolog 8.x instalado en el sistema operativo.
+- Acceso a terminal o consola de comandos.
+
+### Secuencia de comandos para clonacion e instalacion
+
+```bash
+git clone https://github.com/Matthew-Garay/ParadojadeDios.git
+cd ParadojadeDios
 ```
 
-## Caracteristicas
+### Configuracion de variables de entorno
 
-- 20 ejercicios de manipulacion de listas con `member/2` y `append/3`
-- Listas anidadas y tipos mezclados
-- Dialogo por consola sobre el problema del mal
-- Razonamiento logico con conclusiones condicionales
+Este proyecto no requiere archivo .env ni variables de entorno.
 
-## Como ejecutar
+### Comandos para ejecucion en entorno de Desarrollo
 
-### Requisitos previos
-
-- SWI-Prolog 8.x instalado
-
-### Ejecucion
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/Matthew-Garay/ParadojadeDios.git
-   cd ParadojadeDios
-   ```
-2. Ejecuta el archivo principal con SWI-Prolog:
-   ```bash
-   swipl -s listasmemberyappend.pl -g "main" -t "halt"
-   ```
-3. El programa ejecuta los ejercicios de listas y el dialogo logico en consola.
-
-## Estructura del proyecto
-
-```
-ParadojadeDios/
-├── listasmemberyappend.pl   # Codigo fuente en Prolog
-├── Ejercicio IA.jpg         # Imagen de referencia
-├── .gitignore               # Archivos excluidos del control de versiones
-├── LICENSE                  # Licencia MIT
-├── README.md                # Este archivo
-└── docs/                    # Documentacion extendida
-    ├── setup-guide.md       # Guia de instalacion
-    └── architecture.md      # Diagrama de arquitectura
+```bash
+swipl -s listasmemberyappend.pl -g "main" -t "halt"
 ```
 
-## Contacto
+### Comandos para ejecucion en entorno de Produccion
 
-<p align="center">
-  <a href="mailto:1911.garay.perez@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-  <a href="https://www.linkedin.com/in/matthewgarayperez/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-</p>
+No aplica entorno de produccion separado; el programa se ejecuta localmente con el mismo comando de desarrollo.
+
+## F. Creditos de Autoría
+
+Desarrollado por: Matthew Ilveneff Garay Pérez
+Correo Electronico: 1911.garay.perez@gmail.com
